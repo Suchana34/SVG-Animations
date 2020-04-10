@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+
+}
+#shirt,#hat{
+    animation: movey 1s ease-in-out infinite alternate;
+
+}
+#pants,#shoe,#skin,#skin_2{
+    animation: movex 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+
+}
+#cycle,#cycle_2{
+    animation: movexless 1s ease-in-out infinite alternate;
+}
+#back{
+    animation: fast 1s ease-in-out infinite alternate;
+}
+
+#right-wheel, #left-wheel{
+    animation: wheel 1s infinite linear;
+    transform-origin:center;
+    transform-box: fill-box;
+}
+#alternate{
+    animation: movexdown 1s infinite alternate;
+}
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes movey{
+    from{
+        transform: translateY(0em) rotateZ(0deg);
+    }
+    to{
+        transform: translateY(0.7em) rotateZ(1deg);
+    }
+}
+@keyframes movex{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(9deg);
+    }
+}
+@keyframes fast{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(20deg);
+    }
+}
+
+@keyframes movexless{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(8deg);
+    }
+}
+@keyframes movexdown{
+    from{
+        transform: rotateX(8deg);
+    }
+    to{
+        transform: rotateX(0deg);
+    }
+}
